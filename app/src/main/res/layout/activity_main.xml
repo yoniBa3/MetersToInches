@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1faee"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="40sp"
+        android:textColor="#1d3557"
+        android:text="@string/meters_to_inches"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#1d3557"/>
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        android:layout_marginTop="50dp"
+        android:tint="#1d3557"
+        android:src="@drawable/mesurment_icon"/>
+
+    <EditText
+        android:id="@+id/etMeterOrInch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#a8dadc"
+        android:hint="@string/enter_meter_measurement"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:textAlignment="center"
+        android:textCursorDrawable="@drawable/text_cursor"
+        android:textSize="25sp"
+        android:textColor="#1d3557"
+        android:textColorHint="#457b9d"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewIcon"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMeterOrInch"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/convert"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textColor="#f1faee"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:layout_marginEnd="10dp"
+            />
+
+        <Button
+            android:id="@+id/btnChangeMeasurementUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/change_convert"
+            android:textColor="#f1faee"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonsLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="40dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#1d3557"
+        android:textColorHint="#457b9d"
+        android:hint="@string/the_answer_is"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
